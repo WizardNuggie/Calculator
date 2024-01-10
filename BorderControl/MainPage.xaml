@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BorderControl.MainPage">
+
+    <ScrollView Padding="50">
+        <Border Padding="50" Stroke="Black" StrokeShape="RoundRectangle 50, 0, 0, 50" StrokeDashArray="10, 10" StrokeDashOffset="5" HeightRequest="300" WidthRequest="300">
+            
+        </Border>
+    </ScrollView>
+
+</ContentPage>
