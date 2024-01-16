@@ -4,29 +4,34 @@
              x:Class="BorderControl.Calculator"
              Title="Calculator">
     <Grid RowDefinitions="*, 2*" ColumnDefinitions="*">
-        <Border Grid.Row="0" HeightRequest="120" WidthRequest="300" Stroke="Gray" StrokeThickness="2" BackgroundColor="DarkGray" Opacity="40">
-            <Label VerticalOptions="Center" FontSize="40" Text=" " x:Name="screen"/>
-        </Border>
+        <Border x:Name="screenBorder" Grid.Row="0" Stroke="Gray" StrokeThickness="2" BackgroundColor="DarkGray" Opacity="40">
+            <Grid RowDefinitions="*, *, *">
+                <Label TextColor="#454242" HorizontalOptions="Start" Grid.Row="0" FontSize="40" Text="" x:Name="totalScreen"/>
+                <Label TextColor="Black" HorizontalOptions="Center" Grid.Row="1" FontSize="40" Text="" x:Name="currScreen"/>
+                <Label TextColor="Black" HorizontalOptions="End" Grid.Row="2" FontSize="40" Text="" x:Name="resScreen"/>
+            </Grid>
+    </Border>
         <Border Grid.Row="1" StrokeThickness="0">
             <Grid Margin="10" RowDefinitions="*, *, *, *, *" ColumnDefinitions="*, *, *, *">
-                <Button Clicked="ResetScreen" x:Name="reset" Text="CE" FontSize="45" Margin="5" Grid.Row="0" BackgroundColor="#C07D63" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num1" Text="1" FontSize="45" Margin="5" Grid.Row="1" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num4" Text="4" FontSize="45" Margin="5" Grid.Row="2" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num7" Text="7" FontSize="45" Margin="5" Grid.Row="3" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="MethodAddTextScreen" x:Name="add" Text="+" FontSize="45" Margin="5" Grid.Row="0" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num2" Text="2" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num5" Text="5" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num8" Text="8" FontSize="45" Margin="5" Grid.Row="3" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="MethodAddTextScreen" x:Name="subtract" Text="-" FontSize="45" Margin="5" Grid.Row="0" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num3" Text="3" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num6" Text="6" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num9" Text="9" FontSize="45" Margin="5" Grid.Row="3" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="DeleteScreen" x:Name="del" Text="Del" FontSize="20" Margin="5" Grid.Row="0" Grid.Column="3" BackgroundColor="#90917E" CornerRadius="25"/>
-                <Button Clicked="MethodAddTextScreen" x:Name="mul" Text="*" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="3" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="MethodAddTextScreen" x:Name="dev" Text="/" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="3" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="MethodAddTextScreen" x:Name="point" Text="." FontSize="45" Margin="5" Grid.Row="3" Grid.Column="3" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="AddTextScreen" x:Name="num0" Text="0" FontSize="45" Margin="5" Grid.Row="4" Grid.ColumnSpan="3" BackgroundColor="#8063C0" CornerRadius="25"/>
-                <Button Clicked="Calculate" x:Name="equals" Text="=" FontSize="45" Margin="5" Grid.Row="4" Grid.Column="4" BackgroundColor="#2881CA" CornerRadius="25"/>
+                <Button Clicked="ResetScreen" TextColor="Black" x:Name="reset" Text="CE" FontSize="45" Margin="5" Grid.Row="0" BackgroundColor="#C07D63" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num1" Text="1" FontSize="45" Margin="5" Grid.Row="1" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num4" Text="4" FontSize="45" Margin="5" Grid.Row="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num7" Text="7" FontSize="45" Margin="5" Grid.Row="3" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="MethodAddTextScreen" TextColor="White" x:Name="add" Text="+" FontSize="45" Margin="5" Grid.Row="0" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num2" Text="2" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num5" Text="5" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num8" Text="8" FontSize="45" Margin="5" Grid.Row="3" Grid.Column="1" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="MethodAddTextScreen" TextColor="White" x:Name="subtract" Text="-" FontSize="45" Margin="5" Grid.Row="0" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num3" Text="3" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num6" Text="6" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num9" Text="9" FontSize="45" Margin="5" Grid.Row="3" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="DeleteScreen" TextColor="Black" x:Name="del" Text="Del" FontSize="20" Margin="5" Grid.Row="0" Grid.Column="3" BackgroundColor="#90917E" CornerRadius="25"/>
+                <Button Clicked="MethodAddTextScreen" TextColor="White" x:Name="mul" Text="*" FontSize="45" Margin="5" Grid.Row="1" Grid.Column="3" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="MethodAddTextScreen" TextColor="White" x:Name="dev" Text="/" FontSize="45" Margin="5" Grid.Row="2" Grid.Column="3" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="MethodAddTextScreen" TextColor="White" x:Name="point" Text="." FontSize="45" Margin="5" Grid.Row="4" Grid.Column="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="AddTextScreen" TextColor="White" x:Name="num0" Text="0" FontSize="45" Margin="5" Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="#8063C0" CornerRadius="25"/>
+                <Button Clicked="Ans" TextColor="Black" x:Name="ans" Text="Ans" FontSize="20" Margin="5" Grid.Row="3" Grid.Column="3" BackgroundColor="#ad3e3e" CornerRadius="25"/>
+                <Button Clicked="Calculate" TextColor="Black" x:Name="equals" Text="=" FontSize="45" Margin="5" Grid.Row="4" Grid.Column="3" BackgroundColor="#2881CA" CornerRadius="25"/>
             </Grid>
         </Border>
     </Grid>
